@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add('js');</script>
+  <meta name="description"
+    content="Bhindie Games is an indie game studio launching soon. Your Adventure, Our Art — get notified the moment we go live." />
+  <meta name="theme-color" content="#05070d" />
+  <title>Bhindie Games</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+
+  <script src="https://kit.fontawesome.com/069e84380e.js" crossorigin="anonymous"></script>
+
+  <meta property="og:title" content="Bhindie Games — Coming Soon" />
+  <meta property="og:description" content="Your Adventure, Our Art. An independent game studio, launching soon." />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <p class="loader-line">&gt; booting bhindie games<span class="cursor"></span></p>
+  </div>
+
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+
+  <div class="glossy-bg" aria-hidden="true"></div>
+  <div class="cursor-light" id="cursorLight" aria-hidden="true"></div>
+  <div class="particle-field" id="particleField" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav aria-label="Primary">
+    <div class="logo-container">
+      <a class="logo" href="index.html" aria-label="BG home">
+        <img src="images/logo.png" class="logoimg" alt="" />
+      </a>
+      <div class="txt">Bhindie Games</div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">// BHINDIE GAMES — INDIE GAME STUDIO</p>
+        <span class="ribbon ribbon-soon hero-badge">Coming Soon</span>
+        <h1>Your Adventure,<br />Our Art.</h1>
+        <p class="hero-sub">
+          We're building something worth the wait. The catalog
+          isn't open yet, but the studio is very much awake.
+        </p>
+        <div class="hero-actions">
+          <a href="#notify" class="btn btn-primary">Notify Me at Launch</a>
+        </div>
+      </div>
+
+      <div class="hero-terminal" aria-hidden="true">
+        <span class="hud-corner hud-corner-tl"></span>
+        <span class="hud-corner hud-corner-br"></span>
+        <div class="terminal-bar">
+          <span class="terminal-dot"></span>
+          <span class="terminal-title">bhindie_games — launch.sh</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <p class="t-line" data-line>// bhindie games boot sequence</p>
+          <p class="t-line" data-line>initializing studio<span class="t-dots">..........</span><span
+              class="t-ok">OK</span></p>
+          <p class="t-line" data-line>titles in development<span class="t-dots">......</span><span class="t-val"
+              data-count="2">1</span></p>
+          <p class="t-line" data-line>studio size<span class="t-dots">..................</span><span
+              class="t-val">small</span></p>
+          <p class="t-line" data-line>corners cut<span class="t-dots">..................</span><span
+              class="t-val">none</span></p>
+          <p class="t-line t-status" data-line>status: <span class="t-ember">your adventure, our art</span><span
+              class="cursor"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NOTIFY ================= -->
+    <section class="newsletter-section reveal" id="notify" aria-labelledby="notifyHeading">
+      <div class="newsletter-inner">
+
+        <span class="hud-corner hud-corner-tl" aria-hidden="true"></span>
+        <span class="hud-corner hud-corner-br" aria-hidden="true"></span>
+
+        <p class="eyebrow">// STAY IN THE LOOP</p>
+
+        <h2 id="notifyHeading">Be First To Know</h2>
+
+        <p>One email the moment we launch. No hype, no filler.</p>
+
+        <form id="newsletterForm" class="newsletter-form" action="https://formsubmit.co/bhindiegames@gmail.com"
+          method="POST">
+
+          <label for="newsletterEmail" class="sr-only">
+            Email address
+          </label>
+
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required />
+
+          <input type="hidden" name="_subject" value="New Notify Me Submission" />
+
+          <textarea name="_autoresponse" style="display:none;">Hi,
+
+Thanks for signing up to hear from BG Studio — you're officially on the list.
+
+We're an independent game studio putting together something we think is worth the wait. The moment we launch, you'll be the first to know.
+
+Your Adventure, Our Art.
+
+— The BG Team</textarea>
+
+          <input type="hidden" name="_next" value="https://bhindiegames.com/?submitted=true" />
+
+          <input type="text" name="_honey" style="display:none;" />
+          <button type="submit" class="btn btn-primary">
+            Notify Me
+          </button>
+
+        </form>
+
+        <p class="newsletter-note" id="newsletterNote" role="status" aria-live="polite"></p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="images/logo.png" class="footer-logo" alt="" />
+      <span>Bhindie Games</span>
+    </div>
+    <p class="footer-tagline">Your Adventure, Our Art.</p>
+
+    <!-- <div class="social-icons">
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+    </div> -->
+
+    <small class="copyright">&copy; <span id="year">2026</span> Bhindie Games. All rights reserved.</small>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
