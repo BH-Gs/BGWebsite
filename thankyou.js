@@ -16,8 +16,8 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     return;
   }
 
-  const MIN_DISPLAY_MS = 2000;
-  const MAX_WAIT_MS = 3000;
+  const MIN_DISPLAY_MS = 3000;
+  const MAX_WAIT_MS = 4500;
   const start = Date.now();
   let finished = false;
 
