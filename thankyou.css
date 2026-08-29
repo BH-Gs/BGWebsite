@@ -1,18 +1,5 @@
 @charset "UTF-8";
 
-/* =========================================================
-   BG — Thank You
-   Design language: "Circuit & Ember" (same as Home.css)
-   — circuit (cyan) = structure, system
-   — ember (amber)  = warmth, action, the thing you click
-
-   Trimmed from Home.css/ComingSoon.css: reset, tokens,
-   utilities, background system, buttons, hero + terminal,
-   footer, back-to-top, plus the same simplified logo-only
-   nav ComingSoon.css uses.
-   ========================================================= */
-
-/* ---------- 1. RESET & BASE ---------- */
 *,
 *::before,
 *::after {
@@ -68,7 +55,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-/* ---------- 2. DESIGN TOKENS ---------- */
 :root {
   --brand-blue: #2D31C4;
   --brand-orange: #FF4F00;
@@ -124,7 +110,6 @@ body::-webkit-scrollbar-thumb {
   --nav-height-mobile: 64px;
 }
 
-/* ---------- 3. UTILITIES ---------- */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -272,7 +257,6 @@ body::-webkit-scrollbar-thumb {
   100% { transform: translate(var(--drift, 20px), -100vh); opacity: 0; }
 }
 
-/* ---------- 4. BUTTONS ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -333,7 +317,6 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-2px);
 }
 
-/* ---------- 7. HERO + TERMINAL ---------- */
 .hero {
   position: relative;
   display: flex;
@@ -562,7 +545,6 @@ body::-webkit-scrollbar-thumb {
   color: var(--alert);
 }
 
-/* ---------- 11. FOOTER ---------- */
 footer {
   position: relative;
   z-index: 3;
@@ -624,7 +606,6 @@ footer .copyright {
   font-family: var(--font-mono);
 }
 
-/* ---------- 12. BACK TO TOP ---------- */
 .back-to-top {
   position: fixed;
   bottom: 24px;
@@ -659,7 +640,6 @@ footer .copyright {
   transform: translateY(-3px);
 }
 
-/* ---------- NAV (simplified: logo only, no links/search/sidebar needed) ---------- */
 nav {
   width: 100%;
   height: var(--nav-height);
@@ -709,7 +689,6 @@ nav .logo-container {
     drop-shadow(0 0 1px rgba(244, 244, 244, 0.9)) drop-shadow(0 0 1.5px rgba(244, 244, 244, 0.9)) drop-shadow(0 0 10px rgba(80, 191, 255, 0.65));
 }
 
-/* Logo outline — keeps it visible against backgrounds close to its own color */
 .logoimg,
 .logoimgmob,
 .footer-logo {
@@ -725,7 +704,6 @@ nav .txt {
   letter-spacing: 0.5px;
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   nav {
     padding: 0 28px;
@@ -782,7 +760,6 @@ nav .txt {
   }
 }
 
-/* ---------- 14. REDUCED MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

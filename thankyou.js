@@ -1,12 +1,5 @@
-// =========================================================
-// BG — Thank You
-// Same trimmed set as ComingSoon.js, minus the newsletter
-// handler — there's no form on this page.
-// =========================================================
-
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// --------- Page boot loader ----------
 (function pageLoader() {
   const loader = document.getElementById('pageLoader');
   if (!loader) return;
@@ -35,7 +28,6 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   setTimeout(finish, MAX_WAIT_MS);
 })();
 
-// --------- Sticky nav on scroll ----------
 window.addEventListener('scroll', function () {
   const scrolled = window.scrollY || document.documentElement.scrollTop;
   document.querySelectorAll('nav').forEach((navEl) => {
@@ -43,7 +35,6 @@ window.addEventListener('scroll', function () {
   });
 }, { passive: true });
 
-// --------- Scroll progress bar ----------
 const scrollProgress = document.getElementById('scrollProgress');
 if (scrollProgress) {
   window.addEventListener('scroll', () => {
@@ -54,7 +45,6 @@ if (scrollProgress) {
   }, { passive: true });
 }
 
-// --------- Hero terminal boot sequence ----------
 function animateCount(el) {
   const target = parseInt(el.dataset.count, 10);
   if (Number.isNaN(target)) return;
@@ -102,7 +92,6 @@ function animateCount(el) {
   });
 })();
 
-// --------- Ambient particles (page-wide background animation) ----------
 if (!prefersReducedMotion) {
   const particleField = document.getElementById('particleField');
   if (particleField) {
@@ -123,7 +112,6 @@ if (!prefersReducedMotion) {
   }
 }
 
-// --------- Cursor-tracked light ----------
 const cursorLight = document.getElementById('cursorLight');
 if (cursorLight && !prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   window.addEventListener('mousemove', (e) => {
@@ -132,7 +120,6 @@ if (cursorLight && !prefersReducedMotion && window.matchMedia('(hover: hover) an
   });
 }
 
-// --------- Reveal-on-scroll ----------
 const revealEls = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealEls.length && !prefersReducedMotion) {
   const observer = new IntersectionObserver((entries) => {
@@ -149,7 +136,6 @@ if ('IntersectionObserver' in window && revealEls.length && !prefersReducedMotio
   revealEls.forEach((el) => el.classList.add('is-visible'));
 }
 
-// --------- Back to top ----------
 const backToTop = document.getElementById('backToTop');
 if (backToTop) {
   window.addEventListener('scroll', () => {
@@ -161,6 +147,5 @@ if (backToTop) {
   });
 }
 
-// --------- Footer year ----------
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
